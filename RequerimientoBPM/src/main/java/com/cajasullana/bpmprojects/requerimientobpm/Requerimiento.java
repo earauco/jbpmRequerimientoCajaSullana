@@ -9,12 +9,10 @@ public class Requerimiento implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "Fecha")
+   @org.kie.api.definition.type.Label("Fecha")
    private java.util.Date fecha;
-   @org.kie.api.definition.type.Label(value = "Cliente")
+   @org.kie.api.definition.type.Label("Cliente")
    private com.cajasullana.bpmprojects.requerimientobpm.Cliente cliente;
-   @org.kie.api.definition.type.Label(value = "Estado")
-   private com.cajasullana.bpmprojects.requerimientobpm.Estado estado;
 
    public Requerimiento()
    {
@@ -41,24 +39,11 @@ public class Requerimiento implements java.io.Serializable
       this.cliente = cliente;
    }
 
-   public com.cajasullana.bpmprojects.requerimientobpm.Estado getEstado()
-   {
-      return this.estado;
-   }
-
-   public void setEstado(
-         com.cajasullana.bpmprojects.requerimientobpm.Estado estado)
-   {
-      this.estado = estado;
-   }
-
    public Requerimiento(java.util.Date fecha,
-         com.cajasullana.bpmprojects.requerimientobpm.Cliente cliente,
-         com.cajasullana.bpmprojects.requerimientobpm.Estado estado)
+         com.cajasullana.bpmprojects.requerimientobpm.Cliente cliente)
    {
       this.fecha = fecha;
       this.cliente = cliente;
-      this.estado = estado;
    }
 
 }
