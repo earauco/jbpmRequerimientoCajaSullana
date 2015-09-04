@@ -9,8 +9,9 @@ public class TipoRequerimiento implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "Id")
-   private java.lang.String id;
+   @org.kie.api.definition.type.Label(value = "Nombre")
+   private java.lang.String nombre;
+
    @org.kie.api.definition.type.Label(value = "Tiempo de Atenci\u00F3n")
    private java.lang.Integer tiempoAtencion;
 
@@ -18,14 +19,14 @@ public class TipoRequerimiento implements java.io.Serializable
    {
    }
 
-   public java.lang.String getId()
+   public java.lang.String getNombre()
    {
-      return this.id;
+      return this.nombre;
    }
 
-   public void setId(java.lang.String id)
+   public void setNombre(java.lang.String nombre)
    {
-      this.id = id;
+      this.nombre = nombre;
    }
 
    public java.lang.Integer getTiempoAtencion()
@@ -38,10 +39,10 @@ public class TipoRequerimiento implements java.io.Serializable
       this.tiempoAtencion = tiempoAtencion;
    }
 
-   public TipoRequerimiento(java.lang.String id,
+   public TipoRequerimiento(java.lang.String nombre,
          java.lang.Integer tiempoAtencion)
    {
-      this.id = id;
+      this.nombre = nombre;
       this.tiempoAtencion = tiempoAtencion;
    }
 
