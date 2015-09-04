@@ -9,22 +9,20 @@ public class Cliente implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "DOI")
+   @org.kie.api.definition.type.Label("DOI")
    private java.lang.String dni;
-   @org.kie.api.definition.type.Label(value = "Nombres")
+   @org.kie.api.definition.type.Label("Nombres")
    private java.lang.String nombres;
-   @org.kie.api.definition.type.Label(value = "Apellidos")
+   @org.kie.api.definition.type.Label("Apellidos")
    private java.lang.String apellidos;
-   @org.kie.api.definition.type.Label(value = "Raz\u00F3n Social")
+   @org.kie.api.definition.type.Label("Raz\u00F3n Social")
    private java.lang.String razonSocial;
-   @org.kie.api.definition.type.Label(value = "Direcci\u00F3n")
+   @org.kie.api.definition.type.Label("Direcci\u00F3n")
    private java.lang.String direccion;
-   @org.kie.api.definition.type.Label(value = "Tel\u00E9fono")
+   @org.kie.api.definition.type.Label("Tel\u00E9fono")
    private java.lang.String telefono;
-   @org.kie.api.definition.type.Label(value = "Tipo de Requerimiento")
-   private com.cajasullana.bpmprojects.requerimientobpm.TipoRequerimiento tipoRequerimiento;
-   @org.kie.api.definition.type.Label(value = "Detalle")
-   private java.lang.String detalle;
+   @org.kie.api.definition.type.Label(value = "Email")
+   private java.lang.String email;
 
    public Cliente()
    {
@@ -90,36 +88,20 @@ public class Cliente implements java.io.Serializable
       this.telefono = telefono;
    }
 
-   public com.cajasullana.bpmprojects.requerimientobpm.TipoRequerimiento getTipoRequerimiento()
+   public java.lang.String getEmail()
    {
-      return this.tipoRequerimiento;
+      return this.email;
    }
 
-   public void setTipoRequerimiento(
-         com.cajasullana.bpmprojects.requerimientobpm.TipoRequerimiento tipoRequerimiento)
+   public void setEmail(java.lang.String email)
    {
-      this.tipoRequerimiento = tipoRequerimiento;
+      this.email = email;
    }
 
-   public java.lang.String getDetalle()
-   {
-      return this.detalle;
-   }
-
-   public void setDetalle(java.lang.String detalle)
-   {
-      this.detalle = detalle;
-   }
-
-   public Cliente(
-         java.lang.String dni,
-         java.lang.String nombres,
-         java.lang.String apellidos,
-         java.lang.String razonSocial,
-         java.lang.String direccion,
-         java.lang.String telefono,
-         com.cajasullana.bpmprojects.requerimientobpm.TipoRequerimiento tipoRequerimiento,
-         java.lang.String detalle)
+   public Cliente(java.lang.String dni, java.lang.String nombres,
+         java.lang.String apellidos, java.lang.String razonSocial,
+         java.lang.String direccion, java.lang.String telefono,
+         java.lang.String email)
    {
       this.dni = dni;
       this.nombres = nombres;
@@ -127,8 +109,7 @@ public class Cliente implements java.io.Serializable
       this.razonSocial = razonSocial;
       this.direccion = direccion;
       this.telefono = telefono;
-      this.tipoRequerimiento = tipoRequerimiento;
-      this.detalle = detalle;
+      this.email = email;
    }
 
 }
