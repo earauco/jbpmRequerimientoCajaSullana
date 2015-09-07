@@ -21,8 +21,14 @@ public class Cliente implements java.io.Serializable
    private java.lang.String direccion;
    @org.kie.api.definition.type.Label("Tel\u00E9fono")
    private java.lang.String telefono;
-   @org.kie.api.definition.type.Label(value = "Email")
+   @org.kie.api.definition.type.Label("Email")
    private java.lang.String email;
+
+   @org.kie.api.definition.type.Label(value = "Es Cliente")
+   private java.lang.Boolean clientesi;
+
+   @org.kie.api.definition.type.Label(value = "Tipo Documento")
+   private java.lang.String tipoDoi;
 
    public Cliente()
    {
@@ -98,10 +104,31 @@ public class Cliente implements java.io.Serializable
       this.email = email;
    }
 
+   public java.lang.Boolean getClientesi()
+   {
+      return this.clientesi;
+   }
+
+   public void setClientesi(java.lang.Boolean clientesi)
+   {
+      this.clientesi = clientesi;
+   }
+
+   public java.lang.String getTipoDoi()
+   {
+      return this.tipoDoi;
+   }
+
+   public void setTipoDoi(java.lang.String tipoDoi)
+   {
+      this.tipoDoi = tipoDoi;
+   }
+
    public Cliente(java.lang.String dni, java.lang.String nombres,
          java.lang.String apellidos, java.lang.String razonSocial,
          java.lang.String direccion, java.lang.String telefono,
-         java.lang.String email)
+         java.lang.String email, java.lang.Boolean clientesi,
+         java.lang.String tipoDoi)
    {
       this.dni = dni;
       this.nombres = nombres;
@@ -110,6 +137,8 @@ public class Cliente implements java.io.Serializable
       this.direccion = direccion;
       this.telefono = telefono;
       this.email = email;
+      this.clientesi = clientesi;
+      this.tipoDoi = tipoDoi;
    }
 
 }
