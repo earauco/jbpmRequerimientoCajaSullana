@@ -14,6 +14,12 @@ public class Requerimiento implements java.io.Serializable
    @org.kie.api.definition.type.Label("Cliente")
    private com.cajasullana.bpmprojects.requerimientobpm.Cliente cliente;
 
+   @org.kie.api.definition.type.Label(value = "Detalle")
+   private java.lang.String detalle;
+
+   @org.kie.api.definition.type.Label(value = "Canal de Respuesta")
+   private java.lang.String canalRpta;
+
    public Requerimiento()
    {
    }
@@ -39,11 +45,34 @@ public class Requerimiento implements java.io.Serializable
       this.cliente = cliente;
    }
 
+   public java.lang.String getDetalle()
+   {
+      return this.detalle;
+   }
+
+   public void setDetalle(java.lang.String detalle)
+   {
+      this.detalle = detalle;
+   }
+
+   public java.lang.String getCanalRpta()
+   {
+      return this.canalRpta;
+   }
+
+   public void setCanalRpta(java.lang.String canalRpta)
+   {
+      this.canalRpta = canalRpta;
+   }
+
    public Requerimiento(java.util.Date fecha,
-         com.cajasullana.bpmprojects.requerimientobpm.Cliente cliente)
+         com.cajasullana.bpmprojects.requerimientobpm.Cliente cliente,
+         java.lang.String detalle, java.lang.String canalRpta)
    {
       this.fecha = fecha;
       this.cliente = cliente;
+      this.detalle = detalle;
+      this.canalRpta = canalRpta;
    }
 
 }
