@@ -37,9 +37,8 @@
 <property name="inputBinding" value="cliente/dni"/>
 <property name="outputBinding" value="cliente/dni"/>
 <property name="fieldClass" value="java.lang.String"/>
-<property name="onChangeScript" value="$.ajax({  type: &apos;POST&apos;, url: &apos;http://localhost:8888/clienteRest/TestCce/obtenerClienteYCuentas.json&apos;,  contentType:&apos;application/json&apos;, success: function(data) { 
-console.log(data);
-var elem = document.getElementById(&quot;cliente_apellidos&quot;);  elem.value =  data.vi_segundo_apellido; },                                                                                                                                                                                    error: function() { console.log(&apos;Uh Oh!&apos;); } }); "/>
+<property name="onChangeScript" value="$.ajax({  type: &apos;POST&apos;, url: &apos;http://localhost:8888/clienteRest/TestCce/obtenerClienteYCuentas.json&apos;,  contentType:&apos;application/json&apos;, success: function(data) {  console.log(data); var elem = document.getElementById(&quot;requerimiento_cliente.cliente_apellidos&quot;);  elem.value =  data.vi_segundo_apellido; },
+error: function() { console.log(&apos;Uh Oh!&apos;); } }); "/>
 </field>
 <field position="3" name="cliente_apellidos" type="InputText" id="1768561669">
 <property name="fieldRequired" value="false"/>
