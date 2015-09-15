@@ -23,9 +23,6 @@ public class Requerimiento implements java.io.Serializable
    @org.kie.api.definition.type.Label("Plazo M\u00E1ximo de Atenci\u00F3n")
    private java.lang.String plazoAtencion;
 
-   @org.kie.api.definition.type.Label(value = "Tipo Documento")
-   private java.lang.String tipoDocumento;
-
    public Requerimiento()
    {
    }
@@ -81,27 +78,16 @@ public class Requerimiento implements java.io.Serializable
       this.plazoAtencion = plazoAtencion;
    }
 
-   public java.lang.String getTipoDocumento()
-   {
-      return this.tipoDocumento;
-   }
-
-   public void setTipoDocumento(java.lang.String tipoDocumento)
-   {
-      this.tipoDocumento = tipoDocumento;
-   }
-
    public Requerimiento(java.util.Date fecha,
          com.cajasullana.bpmprojects.requerimientobpm.Cliente cliente,
          java.lang.String detalle, java.lang.String canalRpta,
-         java.lang.String plazoAtencion, java.lang.String tipoDocumento)
+         java.lang.String plazoAtencion)
    {
       this.fecha = fecha;
       this.cliente = cliente;
       this.detalle = detalle;
       this.canalRpta = canalRpta;
       this.plazoAtencion = plazoAtencion;
-      this.tipoDocumento = tipoDocumento;
    }
 
 }
