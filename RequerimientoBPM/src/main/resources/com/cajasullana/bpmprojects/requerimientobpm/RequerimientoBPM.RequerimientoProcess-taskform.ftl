@@ -99,7 +99,7 @@
 	#container
 	{
 		margin: 0 auto;
-		width: 600px;
+		width: 1200px;
 		background:#fff;
 	}
 
