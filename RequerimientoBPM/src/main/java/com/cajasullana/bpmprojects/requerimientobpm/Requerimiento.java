@@ -26,9 +26,6 @@ public class Requerimiento implements java.io.Serializable
    @org.kie.api.definition.type.Label("Observaci\u00F3n")
    private java.lang.String observacion;
 
-   @org.kie.api.definition.type.Label(value = "Direccionamiento")
-   private com.cajasullana.bpmprojects.requerimientobpm.Direcciona direcciona;
-
    public Requerimiento()
    {
    }
@@ -94,22 +91,10 @@ public class Requerimiento implements java.io.Serializable
       this.observacion = observacion;
    }
 
-   public com.cajasullana.bpmprojects.requerimientobpm.Direcciona getDirecciona()
-   {
-      return this.direcciona;
-   }
-
-   public void setDirecciona(
-         com.cajasullana.bpmprojects.requerimientobpm.Direcciona direcciona)
-   {
-      this.direcciona = direcciona;
-   }
-
    public Requerimiento(java.util.Date fecha,
          com.cajasullana.bpmprojects.requerimientobpm.Cliente cliente,
          java.lang.String detalle, java.lang.String canalRpta,
-         java.lang.String plazoAtencion, java.lang.String observacion,
-         com.cajasullana.bpmprojects.requerimientobpm.Direcciona direcciona)
+         java.lang.String plazoAtencion, java.lang.String observacion)
    {
       this.fecha = fecha;
       this.cliente = cliente;
@@ -117,7 +102,6 @@ public class Requerimiento implements java.io.Serializable
       this.canalRpta = canalRpta;
       this.plazoAtencion = plazoAtencion;
       this.observacion = observacion;
-      this.direcciona = direcciona;
    }
 
 }
