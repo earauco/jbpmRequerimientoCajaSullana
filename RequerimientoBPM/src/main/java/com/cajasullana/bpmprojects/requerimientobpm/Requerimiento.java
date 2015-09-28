@@ -23,9 +23,6 @@ public class Requerimiento implements java.io.Serializable
    @org.kie.api.definition.type.Label("Plazo M\u00E1ximo de Atenci\u00F3n")
    private java.lang.String plazoAtencion;
 
-   @org.kie.api.definition.type.Label("Observaci\u00F3n")
-   private java.lang.String observacion;
-
    public Requerimiento()
    {
    }
@@ -81,27 +78,16 @@ public class Requerimiento implements java.io.Serializable
       this.plazoAtencion = plazoAtencion;
    }
 
-   public java.lang.String getObservacion()
-   {
-      return this.observacion;
-   }
-
-   public void setObservacion(java.lang.String observacion)
-   {
-      this.observacion = observacion;
-   }
-
    public Requerimiento(java.util.Date fecha,
          com.cajasullana.bpmprojects.requerimientobpm.Cliente cliente,
          java.lang.String detalle, java.lang.String canalRpta,
-         java.lang.String plazoAtencion, java.lang.String observacion)
+         java.lang.String plazoAtencion)
    {
       this.fecha = fecha;
       this.cliente = cliente;
       this.detalle = detalle;
       this.canalRpta = canalRpta;
       this.plazoAtencion = plazoAtencion;
-      this.observacion = observacion;
    }
 
 }
