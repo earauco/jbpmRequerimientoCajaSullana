@@ -30,8 +30,17 @@ public class Cliente implements java.io.Serializable
    @org.kie.api.definition.type.Label("Tipo Documento")
    private java.lang.String tipoDoi;
 
-   @org.kie.api.definition.type.Label(value = "Apellido Materno")
+   @org.kie.api.definition.type.Label("Apellido Materno")
    private java.lang.String apellidoMaterno;
+
+   @org.kie.api.definition.type.Label(value = "Departamento")
+   private java.lang.String departamento;
+
+   @org.kie.api.definition.type.Label(value = "Provincia")
+   private java.lang.String provincia;
+
+   @org.kie.api.definition.type.Label(value = "Distrito")
+   private java.lang.String distrito;
 
    public Cliente()
    {
@@ -137,11 +146,43 @@ public class Cliente implements java.io.Serializable
       this.apellidoMaterno = apellidoMaterno;
    }
 
+   public java.lang.String getDepartamento()
+   {
+      return this.departamento;
+   }
+
+   public void setDepartamento(java.lang.String departamento)
+   {
+      this.departamento = departamento;
+   }
+
+   public java.lang.String getProvincia()
+   {
+      return this.provincia;
+   }
+
+   public void setProvincia(java.lang.String provincia)
+   {
+      this.provincia = provincia;
+   }
+
+   public java.lang.String getDistrito()
+   {
+      return this.distrito;
+   }
+
+   public void setDistrito(java.lang.String distrito)
+   {
+      this.distrito = distrito;
+   }
+
    public Cliente(java.lang.String dni, java.lang.String nombres,
          java.lang.String apellidos, java.lang.String razonSocial,
          java.lang.String direccion, java.lang.String telefono,
          java.lang.String email, java.lang.Boolean clientesi,
-         java.lang.String tipoDoi, java.lang.String apellidoMaterno)
+         java.lang.String tipoDoi, java.lang.String apellidoMaterno,
+         java.lang.String departamento, java.lang.String provincia,
+         java.lang.String distrito)
    {
       this.dni = dni;
       this.nombres = nombres;
@@ -153,6 +194,9 @@ public class Cliente implements java.io.Serializable
       this.clientesi = clientesi;
       this.tipoDoi = tipoDoi;
       this.apellidoMaterno = apellidoMaterno;
+      this.departamento = departamento;
+      this.provincia = provincia;
+      this.distrito = distrito;
    }
 
 }
