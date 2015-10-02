@@ -28,7 +28,7 @@
 <field position="2" name="dni" type="InputText" id="1749706107">
 <property name="fieldRequired" value="true"/>
 <property name="groupWithPrevious" value="true"/>
-<property name="label" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;Documento de Identidadquot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;Documento de Identidadquot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="readonly" value="false"/>
@@ -37,12 +37,13 @@
 <property name="inputBinding" value="cliente/dni"/>
 <property name="outputBinding" value="cliente/dni"/>
 <property name="fieldClass" value="java.lang.String"/>
-<property name="onChangeScript" value="$.ajax({type: &quot;POST&quot;,   url: &quot;http://localhost:8088/clienteRest/TestCce/extraeInfoCliente.json&quot;, data: {vi_tipoD: document.getElementById(&quot;requerimiento_cliente-tipoD&quot;).value, vi_numD: document.getElementById(&quot;requerimiento_cliente-dni&quot;).value} }).done(function(data) {document.getElementById(&quot;requerimiento_cliente-pA&quot;).value=data.pA;document.getElementById(&quot;requerimiento_cliente-sA&quot;).value = data.sA; document.getElementById(&quot;requerimiento_cliente-nom&quot;).value =data.nom; });"/>
+<property name="onChangeScript" value="$.ajax({type: &quot;POST&quot;,   url: &quot;http://localhost:8088/clienteRest/TestCce/extraeInfoCliente.json&quot;, data: {vi_tipoD: document.getElementById(&quot;requerimiento_cliente-tipoD&quot;).value, vi_numD: document.getElementById(&quot;requerimiento_cliente-dni&quot;).value} }).done(function(data) {var paElem=document.getElementById(&quot;requerimiento_cliente-pA&quot;);paElem.value=data.pA; paElem.onChange();
+document.getElementById(&quot;requerimiento_cliente-sA&quot;).value = data.sA; });"/>
 </field>
 <field position="3" name="pA" type="InputText" id="1768561669">
 <property name="fieldRequired" value="true"/>
 <property name="groupWithPrevious" value="true"/>
-<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;Apellido Paternoquot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="label" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;Apellido Paternoquot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="readonly" value="false"/>
