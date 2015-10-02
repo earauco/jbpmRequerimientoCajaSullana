@@ -37,7 +37,9 @@
 <property name="inputBinding" value="cliente/dni"/>
 <property name="outputBinding" value="cliente/dni"/>
 <property name="fieldClass" value="java.lang.String"/>
-<property name="onChangeScript" value="$.ajax({type: &quot;POST&quot;,  url: &quot;http://localhost:8088/clienteRest/TestCce/extraeInfoCliente.json&quot;,   data: {vi_tipo_documento: document.getElementById(&quot;requerimiento_cliente-tipoDoi&quot;).value, vi_num_documento: document.getElementById(&quot;requerimiento_cliente-dni&quot;).value}  }).done(function(data) { document.getElementById(&quot;requerimiento_cliente-apellidos&quot;).value=data.pA; document.getElementById(&quot;requerimiento_cliente-apellidoMaterno&quot;).value = data.sA; }); "/>
+<property name="onChangeScript" value="$.ajax({type: &quot;POST&quot;,   url: &quot;http://localhost:8088/clienteRest/TestCce/extraerInfoCliente.json&quot;, data: {vi_tipo_documento: document.getElementById(&quot;requerimiento_cliente-tipoDoi&quot;).value,
+vi_num_documento: document.getElementById(&quot;requerimiento_cliente-dni&quot;).value} 
+}).done(function(data) {document.getElementById(&quot;requerimiento_cliente-apellidos&quot;).value=data.pA;document.getElementById(&quot;requerimiento_cliente-apellidoMaterno&quot;).value = data.sA; document.getElementById(&quot;requerimiento_cliente-nombres&quot;).value ="/>
 </field>
 <field position="3" name="apellidos" type="InputText" id="1768561669">
 <property name="fieldRequired" value="true"/>
