@@ -122,9 +122,9 @@ elemSA.onchange(); });"/>
 <property name="inputBinding" value="cliente/departamento"/>
 <property name="outputBinding" value="cliente/departamento"/>
 <property name="fieldClass" value="java.lang.String"/>
-<property name="onChangeScript" value="$.ajax({type: &quot;POST&quot;,            url: &quot;http://localhost:8088/clienteRest/TestCce/extraeInfoCliente.json&quot;,   data: {vi_tipoD: document.getElementById(&quot;requerimiento_cliente-tipoD&quot;).value,    vi_num_documento: document.getElementById(&quot;requerimiento_cliente-dni&quot;).value}  }).done(function(data) {var elemSA = document.getElementById(&quot;requerimiento_cliente-sA&quot;); 
-elemSA.value = data.sA; document.getElementById(&quot;requerimiento_cliente-nom&quot;).value = data.nom; 
-elemSA.onchange(); });"/>
+<property name="onChangeScript" value="$.ajax({type: &quot;POST&quot;,            url: &quot;http://localhost:8088/clienteRest/TestCce/extraeInfoCliente.json&quot;,   data: {vi_tipoD: document.getElementById(&quot;requerimiento_cliente-tipoD&quot;).value,    vi_num_documento: document.getElementById(&quot;requerimiento_cliente-dni&quot;).value}  }).done(function(data) {var elemPROV = document.getElementById(&quot;requerimiento_cliente-prov&quot;); 
+elemPROV.value = data.cP; document.getElementById(&quot;requerimiento_cliente-dist&quot;).value = data.cDt; 
+});"/>
 </field>
 <field position="9" name="prov" type="InputText" id="2114922043">
 <property name="fieldRequired" value="false"/>
